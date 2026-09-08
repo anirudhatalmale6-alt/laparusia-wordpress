@@ -21,7 +21,7 @@ RACINE = os.path.dirname(os.path.abspath(__file__))
 SOURCE = os.path.normpath(os.path.join(RACINE, "..", "laparusia"))
 SORTIE = os.path.join(RACINE, "theme")
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 
 
 def lire(nom):

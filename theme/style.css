@@ -5,7 +5,7 @@ Author: Anirudha Talmale
 Description: Single-page theme for LaParusia — pizza and bakery. The page is
   the pizza builder: eight slices, each carrying its own toppings, priced from
   data/menu.json. No figure is written into the code.
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 6.0
 Tested up to: 7.1
 License: GPLv2 or later
@@ -78,6 +78,14 @@ a{color:var(--rose-d)}
 .btn:active{transform:translateY(1px)}
 .btn-quiet{background:#fff;color:var(--rose-d);border:1.5px solid var(--line)}
 .btn-quiet:hover{background:var(--rose-l);color:var(--rose-d);border-color:var(--rose)}
+
+/* L'en-tete est COLLANT. Sans la reserve ci-dessous, un lien d'ancre amene
+   la section a top:0 — c'est-a-dire DERRIERE la barre : 69 px avales sur
+   grand ecran, 118 px sur telephone ou la navigation passe a la ligne. Le
+   titre de la section visee disparait donc au moment precis ou l'on clique
+   pour l'atteindre. Mesure au navigateur, pas estimee. */
+html{scroll-padding-top:84px}
+@media (max-width:700px){html{scroll-padding-top:132px}}
 
 /* ---------- en-tete ------------------------------------------------ */
 .top{position:sticky;top:0;z-index:20;background:rgba(255,252,253,.92);

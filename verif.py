@@ -205,6 +205,28 @@ with sync_playwright() as p:
     verif("aucun montant a l'ecran qui ne vienne de la carte",
           not inconnus, str(sorted(inconnus)[:5]))
 
+    # --- les liens d'ancre ne passent pas sous l'en-tete collant ----------
+    # Defaut trouve a la mesure et corrige : sans scroll-padding, cliquer
+    # « Build a pizza » amenait la section a top:0, donc DERRIERE la barre.
+    # On mesure aux deux largeurs, parce que la barre est deux fois plus
+    # haute quand la navigation passe a la ligne.
+    for largeur, nom in ((1280, "bureau"), (390, "mobile")):
+        pg.set_viewport_size({"width": largeur, "height": 800})
+        pg.goto(BASE + "/", wait_until="networkidle")
+        pg.wait_for_timeout(300)
+        haut_entete = pg.evaluate(
+            "() => document.querySelector('header.top').getBoundingClientRect().height")
+        for ancre in ("#builder", "#bakery"):
+            pg.click(f"a[href='{ancre}']")
+            pg.wait_for_timeout(800)
+            haut = pg.evaluate(
+                f"() => document.querySelector('{ancre}').getBoundingClientRect().top")
+            verif(f"{nom} : {ancre} arrive sous l'en-tete, pas derriere",
+                  haut >= haut_entete - 2,
+                  f"haut {haut:.0f} px vs en-tete {haut_entete:.0f} px")
+    pg.set_viewport_size({"width": 1280, "height": 800})
+    pg.goto(BASE + "/", wait_until="networkidle")
+
     verif("aucune erreur JavaScript", not erreurs, str(erreurs[:2]))
 
     # --- captures ---------------------------------------------------------

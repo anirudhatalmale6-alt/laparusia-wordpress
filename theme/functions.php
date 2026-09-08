@@ -7,7 +7,7 @@
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-define( 'LP_VERSION', '1.0.0' );
+define( 'LP_VERSION', '1.0.1' );
 
 function lp_soutien() {
 	add_theme_support( 'title-tag' );
