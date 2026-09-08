@@ -1,0 +1,41 @@
+{
+  "_read_me": "EVERY PRICE IN THIS FILE IS A PLACEHOLDER. They are here so the builder can do arithmetic, not because they are LaParusia's prices. Replace them with the real ones and nothing else needs to change — the page reads this file, no figure is written into the code. The same goes for the topping list and the sizes.",
+  "brand": {
+    "name": "LaParusia",
+    "line": "Pizza and bakery",
+    "claim": "Eight slices. Eight decisions."
+  },
+  "currency": "CAD",
+  "sizes": [
+    { "key": "10", "inches": 10, "label": "10\"", "serves": "1 person",   "base": 13.5 },
+    { "key": "12", "inches": 12, "label": "12\"", "serves": "1 to 2",     "base": 16.5 },
+    { "key": "14", "inches": 14, "label": "14\"", "serves": "2 to 3",     "base": 19.5 },
+    { "key": "16", "inches": 16, "label": "16\"", "serves": "3 to 4",     "base": 23.0 },
+    { "key": "18", "inches": 18, "label": "18\"", "serves": "4 to 6",     "base": 27.0 }
+  ],
+  "bases": [
+    { "key": "tomato", "label": "Tomato", "colour": "#C8402F" },
+    { "key": "white",  "label": "Garlic cream", "colour": "#EFE2D0" },
+    { "key": "pesto",  "label": "Pesto", "colour": "#6E8C3A" }
+  ],
+  "toppings": [
+    { "key": "mozzarella", "label": "Extra mozzarella", "whole": 3.0, "colour": "#F6ECD8", "shape": "blob" },
+    { "key": "pepperoni",  "label": "Pepperoni",        "whole": 3.5, "colour": "#B7332F", "shape": "disc" },
+    { "key": "mushroom",   "label": "Mushroom",         "whole": 2.5, "colour": "#B39A7C", "shape": "cap"  },
+    { "key": "pepper",     "label": "Green pepper",     "whole": 2.0, "colour": "#4E7D3A", "shape": "ring" },
+    { "key": "onion",      "label": "Red onion",        "whole": 2.0, "colour": "#9A5C86", "shape": "arc"  },
+    { "key": "olive",      "label": "Black olive",      "whole": 2.5, "colour": "#3A3140", "shape": "ring" },
+    { "key": "chorizo",    "label": "Chorizo",          "whole": 4.0, "colour": "#9E2B25", "shape": "disc" },
+    { "key": "basil",      "label": "Fresh basil",      "whole": 1.5, "colour": "#3F7A3A", "shape": "leaf" },
+    { "key": "chilli",     "label": "Fresh chilli",     "whole": 1.5, "colour": "#C6362C", "shape": "leaf" },
+    { "key": "feta",       "label": "Feta",             "whole": 3.0, "colour": "#FAF4EA", "shape": "blob" }
+  ],
+  "bakery": [
+    { "label": "Sourdough loaf",      "price": 7.5 },
+    { "label": "Focaccia, rosemary",  "price": 6.0 },
+    { "label": "Butter croissant",    "price": 3.8 },
+    { "label": "Pain au chocolat",    "price": 4.2 },
+    { "label": "Cinnamon knot",       "price": 4.0 },
+    { "label": "Semolina bun, six",   "price": 8.0 }
+  ]
+}
